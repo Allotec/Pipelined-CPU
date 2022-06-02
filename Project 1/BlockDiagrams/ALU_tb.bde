@@ -1,0 +1,562 @@
+SCHM0106
+
+HEADER
+{
+ FREEID 38
+ VARIABLES
+ {
+  #ARCHITECTURE="tb"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"cop\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"rd\"><left=\"127\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE2="<range<index=\"0\"><name=\"rs1\"><left=\"127\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE3="<range<index=\"0\"><name=\"rs2\"><left=\"127\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE4="<range<index=\"0\"><name=\"rs3\"><left=\"127\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #ENTITY="ALU_tb"
+  #LANGUAGE="VHDL"
+  AUTHOR="Matthew Champagne"
+  COMPANY="Stony Brook Universoty"
+  CREATIONDATE="11/27/2021"
+  SOURCE="..\\src\\ALU_tb.vhd"
+ }
+ SYMBOL "#default" "ALU" "ALU"
+ {
+  HEADER
+  {
+   VARIABLES
+   {
+    #CUSTOM_NAME=""
+    #HDL_ENTRIES=
+"library IEEE;\n"+
+"use ieee.std_logic_1164.all;"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1638035078"
+    #NAME="ALU"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="63e6ee76-6583-4a3c-86a7-3815b887d4bd"
+   }
+  }
+  PAGE "" 
+  {
+   PAGEHEADER
+   {
+    RECT (0,0,240,200)
+    FREEID 12
+   }
+   
+   BODY
+   {
+    RECT  1, -1, 0
+    {
+     VARIABLES
+     {
+      #OUTLINE_FILLING="1"
+     }
+     AREA (20,0,220,200)
+    }
+    TEXT  3, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,28,115,52)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 2
+    }
+    TEXT  5, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,68,115,92)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 4
+    }
+    TEXT  7, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,108,115,132)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 6
+    }
+    TEXT  9, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,148,98,172)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 8
+    }
+    TEXT  11, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (135,28,215,52)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 10
+    }
+    PIN  2, 0, 0
+    {
+     COORD (0,40)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="rs1(127:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  4, 0, 0
+    {
+     COORD (0,80)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="rs2(127:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  6, 0, 0
+    {
+     COORD (0,120)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="rs3(127:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  8, 0, 0
+    {
+     COORD (0,160)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="cop(4:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  10, 0, 0
+    {
+     COORD (240,40)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #NAME="rd(127:0)"
+      #SIDE="right"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (-20,0) )
+     }
+    }
+   }
+  }
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"library ieee;\n"+
+"use ieee.std_logic_1164.all;\n"+
+"use ieee.NUMERIC_STD.all;"
+   RECT (220,260,620,472)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  PROCESS  2, 0, 0
+  {
+   LABEL "tb1"
+   TEXT 
+"tb1 : process\n"+
+"                         constant period : time := 20 ns;\n"+
+"                         variable rs1Signed : signed(127 downto 0) := \"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000110101\";\n"+
+"                         variable rs2Signed : signed(127 downto 0) := \"00000000000000000000000000000000000000000000000000000000000000000000000000000000100001110110001000000000000000000000000000000000\";\n"+
+"                         variable rs3Signed : signed(127 downto 0) := \"00000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001000100000000000000000000000000000000\";\n"+
+"                       begin\n"+
+"                         rs1 <= std_logic_vector(to_signed(5170,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(4099,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(66,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(1,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 275704);\n"+
+"                         rs1 <= std_logic_vector(to_signed(458,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(274895457,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(354783973,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(2,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 22702580);\n"+
+"                         rs1 <= std_logic_vector(to_signed(5170,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(4099,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(66,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(3,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 265364);\n"+
+"                         rs1 <= std_logic_vector(to_signed(458,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(274895457,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(354783973,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(4,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 22701664);\n"+
+"                         rs1 <= std_logic_vector(to_signed(5170,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(4099,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(66,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(5,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 275704);\n"+
+"                         rs1 <= std_logic_vector(rs1Signed);\n"+
+"                         rs2 <= std_logic_vector(rs2Signed);\n"+
+"                         rs3 <= std_logic_vector(rs3Signed);\n"+
+"                         cop <= std_logic_vector(to_unsigned(6,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd(31 downto 0))) = 151421879);\n"+
+"                         rs1 <= std_logic_vector(to_signed(5170,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(4099,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(66,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(7,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 265364);\n"+
+"                         rs1 <= std_logic_vector(rs1Signed);\n"+
+"                         rs2 <= std_logic_vector(rs2Signed);\n"+
+"                         rs3 <= std_logic_vector(rs3Signed);\n"+
+"                         cop <= std_logic_vector(to_unsigned(8,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd(31 downto 0))) = 151419725);\n"+
+"                         rs1 <= std_logic_vector(rs1Signed);\n"+
+"                         rs2 <= std_logic_vector(rs2Signed);\n"+
+"                         rs3 <= std_logic_vector(rs3Signed);\n"+
+"                         cop <= std_logic_vector(to_unsigned(9,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd(31 downto 0))) = 0);\n"+
+"                         rs1 <= std_logic_vector(to_signed(338833920,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(268653312,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(10,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 607487232);\n"+
+"                         rs1 <= std_logic_vector(to_signed(338833920,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(268653312,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(11,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 607487232);\n"+
+"                         rs1 <= std_logic_vector(to_signed(338833920,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(268653312,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(12,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd(31 downto 0))) = 338833920);\n"+
+"                         assert (to_integer(signed(rd(63 downto 32))) = 338833920);\n"+
+"                         assert (to_integer(signed(rd(95 downto 64))) = 338833920);\n"+
+"                         assert (to_integer(signed(rd(127 downto 96))) = 338833920);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(338886655,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(13,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(15 downto 0))) = 1);\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 16))) = 0);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(3342335,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(14,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 0))) = 10);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(3339055,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(15,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 0))) = 268697599);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(3339055,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(16,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 0))) = 3339055);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(3339055,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(17,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 0))) = 3339055);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(338886655,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268697599,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(18,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(15 downto 0))) = 16);\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 16))) = 5);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(15,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(4194053,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(19,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(127 downto 96))) = 2013265920);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(15,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(4194053,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(20,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd(31 downto 0))) = 2013265920);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(338842368,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268644864,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(22,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd)) = 70197504);\n"+
+"                         rs1 <= std_logic_vector(to_signed(338842368,128));\n"+
+"                         rs2 <= std_logic_vector(to_signed(268644864,128));\n"+
+"                         rs3 <= std_logic_vector(to_signed(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(23,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(signed(rd)) = 70197504);\n"+
+"                         rs1 <= std_logic_vector(to_unsigned(338842368,128));\n"+
+"                         rs2 <= std_logic_vector(to_unsigned(268644864,128));\n"+
+"                         rs3 <= std_logic_vector(to_unsigned(4329984,128));\n"+
+"                         cop <= std_logic_vector(to_unsigned(24,5));\n"+
+"                         wait for period;\n"+
+"                         assert (to_integer(unsigned(rd)) = 70344960);\n"+
+"                         wait;\n"+
+"                       end process;\n"+
+"                      "
+   RECT (760,300,1161,700)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWTEXT
+   CORNER 10
+   VTX (  14, 17, 20, 23, 29 )
+   VARIABLES
+   {
+    #UPDATE_SENS_LIST="0"
+   }
+  }
+  INSTANCE  3, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="ALU"
+    #CUSTOM_NAME=""
+    #LIBRARY="#default"
+    #REFERENCE="UUT"
+    #SYMBOL="ALU"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="63e6ee76-6583-4a3c-86a7-3815b887d4bd"
+   }
+   COORD (1280,240)
+   VERTEXES ( (10,11), (8,15), (4,18), (6,21), (2,26) )
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1280,240,1280,240)
+   ALIGN 8
+   PARENT 3
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#COMPONENT"
+   RECT (1280,440,1280,440)
+   PARENT 3
+  }
+  NET BUS  6, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="cop(4:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  7, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="rd(127:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  8, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="rs1(127:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  9, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="rs2(127:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  10, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="rs3(127:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  VTX  11, 0, 0
+  {
+   COORD (1520,280)
+  }
+  VTX  12, 0, 0
+  {
+   COORD (1580,280)
+  }
+  BUS  13, 0, 0
+  {
+   NET 7
+   VTX 11, 12
+  }
+  VTX  14, 0, 0
+  {
+   COORD (1161,400)
+  }
+  VTX  15, 0, 0
+  {
+   COORD (1280,400)
+  }
+  BUS  16, 0, 0
+  {
+   NET 6
+   VTX 14, 15
+  }
+  VTX  17, 0, 0
+  {
+   COORD (1161,320)
+  }
+  VTX  18, 0, 0
+  {
+   COORD (1280,320)
+  }
+  BUS  19, 0, 0
+  {
+   NET 9
+   VTX 17, 18
+  }
+  VTX  20, 0, 0
+  {
+   COORD (1161,360)
+  }
+  VTX  21, 0, 0
+  {
+   COORD (1280,360)
+  }
+  BUS  22, 0, 0
+  {
+   NET 10
+   VTX 20, 21
+  }
+  VTX  23, 0, 0
+  {
+   COORD (1161,440)
+  }
+  VTX  24, 0, 0
+  {
+   COORD (1260,440)
+  }
+  BUS  25, 0, 0
+  {
+   NET 8
+   VTX 23, 24
+  }
+  VTX  26, 0, 0
+  {
+   COORD (1280,280)
+  }
+  VTX  27, 0, 0
+  {
+   COORD (1260,280)
+  }
+  BUS  28, 0, 0
+  {
+   NET 8
+   VTX 26, 27
+  }
+  VTX  29, 0, 0
+  {
+   COORD (760,320)
+  }
+  VTX  30, 0, 0
+  {
+   COORD (740,320)
+  }
+  BUS  31, 0, 0
+  {
+   NET 7
+   VTX 29, 30
+  }
+  VTX  32, 0, 0
+  {
+   COORD (1580,220)
+  }
+  VTX  33, 0, 0
+  {
+   COORD (740,220)
+  }
+  BUS  34, 0, 0
+  {
+   NET 7
+   VTX 32, 33
+  }
+  BUS  35, 0, 0
+  {
+   NET 7
+   VTX 32, 12
+  }
+  BUS  36, 0, 0
+  {
+   NET 7
+   VTX 33, 30
+  }
+  BUS  37, 0, 0
+  {
+   NET 8
+   VTX 27, 24
+  }
+ }
+ 
+}
+

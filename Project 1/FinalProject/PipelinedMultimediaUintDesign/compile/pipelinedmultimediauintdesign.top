@@ -1,0 +1,7 @@
+RegisterFile_tb ENTITY
+ProgramCounter_tb ENTITY
+InstructionFetchUnit_tb ENTITY
+PipelinedCPU_tb ENTITY
+InstructionBuffer_tb ENTITY
+InstrutionFetchDecodeReg_tb ENTITY
+ALU_tb ENTITY

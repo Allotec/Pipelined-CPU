@@ -1,0 +1,15 @@
+[Version]
+Version=11.1
+C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\FinalProject.aws
+[Designs]
+pipelinedmultimediauintdesign=.\PipelinedMultimediaUintDesign\PipelinedMultimediaUintDesign.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+pipelinedmultimediauintdesign=1
+[Settings]
+Active=pipelinedmultimediauintdesign

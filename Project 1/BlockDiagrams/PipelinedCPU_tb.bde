@@ -1,0 +1,531 @@
+SCHM0106
+
+HEADER
+{
+ FREEID 46
+ VARIABLES
+ {
+  #ARCHITECTURE="tb"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"addressin\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"datain\"><left=\"24\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE2="<range<index=\"0\"><name=\"pcwritevalue\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #ENTITY="PipelinedCPU_tb"
+  #LANGUAGE="VHDL"
+  AUTHOR="Matthew Champagne"
+  COMPANY="Stony Brook Universoty"
+  CREATIONDATE="11/27/2021"
+  SOURCE="..\\src\\PipelinedCPU_tb.vhd"
+ }
+ SYMBOL "#default" "PipelinedCPU" "PipelinedCPU"
+ {
+  HEADER
+  {
+   VARIABLES
+   {
+    #CUSTOM_NAME=""
+    #HDL_ENTRIES=
+"library IEEE;\n"+
+"use ieee.std_logic_1164.all;"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1638035079"
+    #NAME="PipelinedCPU"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="65c03ce5-c7af-4deb-90a1-7a6ada468461"
+   }
+  }
+  PAGE "" 
+  {
+   PAGEHEADER
+   {
+    RECT (0,0,200,320)
+    FREEID 16
+   }
+   
+   BODY
+   {
+    RECT  1, -1, 0
+    {
+     VARIABLES
+     {
+      #OUTLINE_FILLING="1"
+     }
+     AREA (20,0,200,320)
+    }
+    TEXT  3, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,28,151,52)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 2
+    }
+    TEXT  5, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,68,129,92)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 4
+    }
+    TEXT  7, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,108,92,132)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 6
+    }
+    TEXT  9, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,148,60,172)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 8
+    }
+    TEXT  11, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,188,71,212)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 10
+    }
+    TEXT  13, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,228,93,252)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 12
+    }
+    TEXT  15, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,268,180,292)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 14
+    }
+    PIN  2, 0, 0
+    {
+     COORD (0,40)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="addressIn(5:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  4, 0, 0
+    {
+     COORD (0,80)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="dataIn(24:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  6, 0, 0
+    {
+     COORD (0,120)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="imWrite"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  8, 0, 0
+    {
+     COORD (0,160)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="stall"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  10, 0, 0
+    {
+     COORD (0,200)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="clock"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  12, 0, 0
+    {
+     COORD (0,240)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="pcWrite"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  14, 0, 0
+    {
+     COORD (0,280)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="pcWriteValue(5:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+   }
+  }
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"use std.TEXTIO.all;\n"+
+"library ieee;\n"+
+"use ieee.std_logic_1164.all;\n"+
+"use ieee.NUMERIC_STD.all;\n"+
+"use ieee.STD_LOGIC_TEXTIO.all;"
+   RECT (220,260,620,538)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  PROCESS  2, 0, 0
+  {
+   LABEL "tb1"
+   TEXT 
+"tb1 : process\n"+
+"                         constant period : time := 20 ns;\n"+
+"                         file f : TEXT open READ_MODE is \"Instructions.txt\";\n"+
+"                         variable currentLine : line;\n"+
+"                         variable lineField : std_logic_vector(24 downto 0);\n"+
+"                         variable i : integer range 0 to 64;\n"+
+"                       begin\n"+
+"                         imWrite <= '1';\n"+
+"                         stall <= '1';\n"+
+"                         wait for period;\n"+
+"                         while (not endFile(f)) loop\n"+
+"                             clock <= '0';\n"+
+"                             READLINE(f,currentLine);\n"+
+"                             READ(currentLine,lineField);\n"+
+"                             dataIn <= lineField;\n"+
+"                             addressIn <= std_logic_vector(to_unsigned(i,6));\n"+
+"                             i := i + 1;\n"+
+"                             wait for period;\n"+
+"                             clock <= '1';\n"+
+"                             wait for period;\n"+
+"                         end loop;\n"+
+"                         imWrite <= '0';\n"+
+"                         stall <= '0';\n"+
+"                         while true loop\n"+
+"                             clock <= '0';\n"+
+"                             wait for period;\n"+
+"                             clock <= '1';\n"+
+"                             wait for period;\n"+
+"                         end loop;\n"+
+"                       end process;\n"+
+"                      "
+   RECT (680,240,1081,640)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWTEXT
+   CORNER 10
+   VTX (  14, 17, 28, 31, 37 )
+   VARIABLES
+   {
+    #UPDATE_SENS_LIST="0"
+   }
+  }
+  INSTANCE  3, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="PipelinedCPU"
+    #CUSTOM_NAME=""
+    #LIBRARY="#default"
+    #REFERENCE="UUT"
+    #SYMBOL="PipelinedCPU"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="65c03ce5-c7af-4deb-90a1-7a6ada468461"
+   }
+   COORD (1240,260)
+   VERTEXES ( (4,13), (6,16), (12,19), (14,22), (10,25), (8,34), (2,40) )
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1240,260,1240,260)
+   ALIGN 8
+   PARENT 3
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#COMPONENT"
+   RECT (1240,580,1240,580)
+   PARENT 3
+  }
+  NET WIRE  6, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="pcWrite"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  NET BUS  7, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="pcWriteValue(5:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  8, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="addressIn(5:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET WIRE  9, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="clock"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  NET BUS  10, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="dataIn(24:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET WIRE  11, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="imWrite"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  NET WIRE  12, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="stall"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  VTX  13, 0, 0
+  {
+   COORD (1240,340)
+  }
+  VTX  14, 0, 0
+  {
+   COORD (1081,340)
+  }
+  BUS  15, 0, 0
+  {
+   NET 10
+   VTX 13, 14
+  }
+  VTX  16, 0, 0
+  {
+   COORD (1240,380)
+  }
+  VTX  17, 0, 0
+  {
+   COORD (1081,380)
+  }
+  WIRE  18, 0, 0
+  {
+   NET 11
+   VTX 16, 17
+  }
+  VTX  19, 0, 0
+  {
+   COORD (1240,500)
+  }
+  VTX  20, 0, 0
+  {
+   COORD (1160,500)
+  }
+  WIRE  21, 0, 0
+  {
+   NET 6
+   VTX 19, 20
+  }
+  VTX  22, 0, 0
+  {
+   COORD (1240,540)
+  }
+  VTX  23, 0, 0
+  {
+   COORD (1160,540)
+  }
+  BUS  24, 0, 0
+  {
+   NET 7
+   VTX 22, 23
+  }
+  VTX  25, 0, 0
+  {
+   COORD (1240,460)
+  }
+  VTX  26, 0, 0
+  {
+   COORD (1180,460)
+  }
+  WIRE  27, 0, 0
+  {
+   NET 9
+   VTX 25, 26
+  }
+  VTX  28, 0, 0
+  {
+   COORD (1081,300)
+  }
+  VTX  29, 0, 0
+  {
+   COORD (1180,300)
+  }
+  WIRE  30, 0, 0
+  {
+   NET 9
+   VTX 28, 29
+  }
+  VTX  31, 0, 0
+  {
+   COORD (1081,260)
+  }
+  VTX  32, 0, 0
+  {
+   COORD (1200,260)
+  }
+  WIRE  33, 0, 0
+  {
+   NET 12
+   VTX 31, 32
+  }
+  VTX  34, 0, 0
+  {
+   COORD (1240,420)
+  }
+  VTX  35, 0, 0
+  {
+   COORD (1200,420)
+  }
+  WIRE  36, 0, 0
+  {
+   NET 12
+   VTX 34, 35
+  }
+  VTX  37, 0, 0
+  {
+   COORD (1081,420)
+  }
+  VTX  38, 0, 0
+  {
+   COORD (1220,420)
+  }
+  BUS  39, 0, 0
+  {
+   NET 8
+   VTX 37, 38
+  }
+  VTX  40, 0, 0
+  {
+   COORD (1240,300)
+  }
+  VTX  41, 0, 0
+  {
+   COORD (1220,300)
+  }
+  BUS  42, 0, 0
+  {
+   NET 8
+   VTX 40, 41
+  }
+  BUS  43, 0, 0
+  {
+   NET 8
+   VTX 41, 38
+  }
+  WIRE  44, 0, 0
+  {
+   NET 9
+   VTX 29, 26
+  }
+  WIRE  45, 0, 0
+  {
+   NET 12
+   VTX 32, 35
+  }
+ }
+ 
+}
+

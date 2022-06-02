@@ -1,0 +1,23 @@
+Temporary Registers
+R[0] = 0x0
+R[1] = 0x4
+
+Exponential Function Value Registers 
+R[3] = 0x1 
+R[4] = 0x2
+R[5] = 0x4
+R[6] = 0x8
+R[7] = 0x10
+
+Factorial Function Value Registers
+R[9] = 0x1 
+R[10] = 0x2
+R[11] = 0x6
+R[12] = 0x18
+
+Output Registers
+R[14] = 0x0
+R[15] = 0x0
+R[16] = 0x0
+R[17] = 0x0
+R[18] = 0x8

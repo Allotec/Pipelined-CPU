@@ -1,0 +1,343 @@
+SCHM0106
+
+HEADER
+{
+ FREEID 33
+ VARIABLES
+ {
+  #ARCHITECTURE="behavioral"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"cop\"><left=\"4\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"formatbits\"><left=\"1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE2="<range<index=\"0\"><name=\"r3opcode\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE3="<range<index=\"0\"><name=\"r4opcode\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #ENTITY="Control"
+  #LANGUAGE="VHDL"
+  AUTHOR="Matthew Champagne"
+  COMPANY="Stony Brook Universoty"
+  CREATIONDATE="11/27/2021"
+  SOURCE="..\\src\\Control.vhd"
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"library ieee;\n"+
+"use ieee.std_logic_1164.all;\n"+
+"use ieee.NUMERIC_STD.all;"
+   RECT (220,260,620,472)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  PROCESS  2, 0, 0
+  {
+   LABEL "controlGeneration"
+   TEXT 
+"controlGeneration : process (formatBits,r4Opcode,r3Opcode)\n"+
+"                       begin\n"+
+"                         regWrite <= '1';\n"+
+"                         if (formatBits = \"00\" or formatBits = \"01\") then\n"+
+"                            cop <= std_logic_vector(to_unsigned(0,5));\n"+
+"                         elsif (formatBits = \"10\") then\n"+
+"                            if (r4Opcode = \"000\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(1,5));\n"+
+"                            elsif (r4Opcode = \"001\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(2,5));\n"+
+"                            elsif (r4Opcode = \"010\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(3,5));\n"+
+"                            elsif (r4Opcode = \"011\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(4,5));\n"+
+"                            elsif (r4Opcode = \"100\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(5,5));\n"+
+"                            elsif (r4Opcode = \"101\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(6,5));\n"+
+"                            elsif (r4Opcode = \"110\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(7,5));\n"+
+"                            elsif (r4Opcode = \"111\") then\n"+
+"                               cop <= std_logic_vector(to_unsigned(8,5));\n"+
+"                            end if;\n"+
+"                         elsif (formatBits = \"11\") then\n"+
+"                            if (to_integer(unsigned(r3Opcode)) = 0) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(9,5));\n"+
+"                               regWrite <= '0';\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 1) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(10,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 2) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(11,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 3) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(12,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 4) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(13,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 5) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(14,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 6) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(15,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 7) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(16,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 8) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(17,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 9) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(18,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 10) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(19,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 11) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(20,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 12) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(21,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 13) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(22,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 14) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(23,5));\n"+
+"                            elsif (to_integer(unsigned(r3Opcode)) = 15) then\n"+
+"                               cop <= std_logic_vector(to_unsigned(24,5));\n"+
+"                            end if;\n"+
+"                         end if;\n"+
+"                       end process;\n"+
+"                      "
+   RECT (1060,240,1461,640)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWTEXT
+   CORNER 10
+   VTX (  18, 21, 24, 27, 31 )
+   VARIABLES
+   {
+    #UPDATE_SENS_LIST="0"
+   }
+   LIST (  24, 27, 31 )
+  }
+  INSTANCE  3, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="BusInput"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="formatBits(1:0)"
+    #SYMBOL="BusInput"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+   COORD (920,340)
+   VERTEXES ( (2,25) )
+  }
+  INSTANCE  4, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="BusInput"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="r4Opcode(2:0)"
+    #SYMBOL="BusInput"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+   COORD (920,260)
+   VERTEXES ( (2,30) )
+  }
+  INSTANCE  5, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="BusInput"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="r3Opcode(7:0)"
+    #SYMBOL="BusInput"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+   COORD (920,300)
+   VERTEXES ( (2,28) )
+  }
+  INSTANCE  6, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="BusOutput"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="cop(4:0)"
+    #SYMBOL="BusOutput"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+   COORD (1560,300)
+   VERTEXES ( (2,19) )
+  }
+  INSTANCE  7, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #CUSTOM_NAME=""
+    #LIBRARY="#terminals"
+    #REFERENCE="regWrite"
+    #SYMBOL="Output"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+    #VHDL_TYPE="STD_LOGIC"
+   }
+   COORD (1560,260)
+   VERTEXES ( (2,22) )
+  }
+  TEXT  8, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (869,340,869,340)
+   ALIGN 6
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (869,260,869,260)
+   ALIGN 6
+   PARENT 4
+  }
+  TEXT  10, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (869,300,869,300)
+   ALIGN 6
+   PARENT 5
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1611,300,1611,300)
+   ALIGN 4
+   PARENT 6
+  }
+  TEXT  12, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1611,260,1611,260)
+   ALIGN 4
+   PARENT 7
+  }
+  NET BUS  13, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="cop(4:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  14, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="formatBits(1:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  15, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="r3Opcode(7:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  16, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="r4Opcode(2:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET WIRE  17, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="regWrite"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  VTX  18, 0, 0
+  {
+   COORD (1461,300)
+  }
+  VTX  19, 0, 0
+  {
+   COORD (1560,300)
+  }
+  BUS  20, 0, 0
+  {
+   NET 13
+   VTX 18, 19
+  }
+  VTX  21, 0, 0
+  {
+   COORD (1461,260)
+  }
+  VTX  22, 0, 0
+  {
+   COORD (1560,260)
+  }
+  WIRE  23, 0, 0
+  {
+   NET 17
+   VTX 21, 22
+  }
+  VTX  24, 0, 0
+  {
+   COORD (1060,340)
+  }
+  VTX  25, 0, 0
+  {
+   COORD (920,340)
+  }
+  BUS  26, 0, 0
+  {
+   NET 14
+   VTX 24, 25
+  }
+  VTX  27, 0, 0
+  {
+   COORD (1060,300)
+  }
+  VTX  28, 0, 0
+  {
+   COORD (920,300)
+  }
+  BUS  29, 0, 0
+  {
+   NET 15
+   VTX 27, 28
+  }
+  VTX  30, 0, 0
+  {
+   COORD (920,260)
+  }
+  VTX  31, 0, 0
+  {
+   COORD (1060,260)
+  }
+  BUS  32, 0, 0
+  {
+   NET 16
+   VTX 30, 31
+  }
+ }
+ 
+}
+

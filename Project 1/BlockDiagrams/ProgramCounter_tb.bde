@@ -1,0 +1,377 @@
+SCHM0106
+
+HEADER
+{
+ FREEID 26
+ VARIABLES
+ {
+  #ARCHITECTURE="tb"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"count\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE1="<range<index=\"0\"><name=\"pcwritevalue\"><left=\"5\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #ENTITY="ProgramCounter_tb"
+  #LANGUAGE="VHDL"
+  AUTHOR="Matthew Champagne"
+  COMPANY="Stony Brook Universoty"
+  CREATIONDATE="11/27/2021"
+  SOURCE="..\\src\\ProgramCounter_tb.vhd"
+ }
+ SYMBOL "#default" "ProgramCounter" "ProgramCounter"
+ {
+  HEADER
+  {
+   VARIABLES
+   {
+    #CUSTOM_NAME=""
+    #HDL_ENTRIES=
+"library IEEE;\n"+
+"use ieee.std_logic_1164.all;"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1638035079"
+    #NAME="ProgramCounter"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="6d5409c3-9f75-47ce-a1ff-9ebca653e024"
+   }
+  }
+  PAGE "" 
+  {
+   PAGEHEADER
+   {
+    RECT (0,0,220,200)
+    FREEID 12
+   }
+   
+   BODY
+   {
+    RECT  1, -1, 0
+    {
+     VARIABLES
+     {
+      #OUTLINE_FILLING="1"
+     }
+     AREA (20,0,200,200)
+    }
+    TEXT  3, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,28,71,52)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 2
+    }
+    TEXT  5, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,68,93,92)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 4
+    }
+    TEXT  7, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,108,60,132)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 6
+    }
+    TEXT  9, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (108,28,195,52)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 8
+    }
+    TEXT  11, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,148,180,172)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 10
+    }
+    PIN  2, 0, 0
+    {
+     COORD (0,40)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="clock"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  4, 0, 0
+    {
+     COORD (0,80)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="pcWrite"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  6, 0, 0
+    {
+     COORD (0,120)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="stall"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  8, 0, 0
+    {
+     COORD (220,40)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #NAME="count(5:0)"
+      #SIDE="right"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (-20,0) )
+     }
+    }
+    PIN  10, 0, 0
+    {
+     COORD (0,160)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #LENGTH="20"
+      #NAME="pcWriteValue(5:0)"
+      #SIDE="left"
+      #VHDL_TYPE="STD_LOGIC_VECTOR"
+     }
+     LINE  1, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+   }
+  }
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"library ieee;\n"+
+"use ieee.std_logic_1164.all;\n"+
+"use ieee.NUMERIC_STD.all;"
+   RECT (220,260,620,472)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  PROCESS  2, 0, 0
+  {
+   LABEL "tb1"
+   TEXT 
+"tb1 : process\n"+
+"                         constant period : time := 20 ns;\n"+
+"                       begin\n"+
+"                         clock <= '0';\n"+
+"                         wait for period;\n"+
+"                         clock <= '1';\n"+
+"                         wait for period;\n"+
+"                         clock <= '0';\n"+
+"                         wait for period;\n"+
+"                         clock <= '1';\n"+
+"                         wait for period;\n"+
+"                         clock <= '0';\n"+
+"                         wait for period;\n"+
+"                         clock <= '1';\n"+
+"                         wait for period;\n"+
+"                         clock <= '0';\n"+
+"                         pcWrite <= '0';\n"+
+"                         wait for period;\n"+
+"                         clock <= '1';\n"+
+"                         wait for period;\n"+
+"                         clock <= '0';\n"+
+"                         wait for period;\n"+
+"                       end process;\n"+
+"                      "
+   RECT (680,260,1081,660)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWTEXT
+   CORNER 10
+   VTX (  14, 18 )
+   VARIABLES
+   {
+    #UPDATE_SENS_LIST="0"
+   }
+  }
+  INSTANCE  3, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="ProgramCounter"
+    #CUSTOM_NAME=""
+    #LIBRARY="#default"
+    #REFERENCE="UUT"
+    #SYMBOL="ProgramCounter"
+    #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="6d5409c3-9f75-47ce-a1ff-9ebca653e024"
+   }
+   COORD (1180,240)
+   VERTEXES ( (8,11), (2,15), (4,17), (10,20), (6,23) )
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (1180,240,1180,240)
+   ALIGN 8
+   PARENT 3
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#COMPONENT"
+   RECT (1180,440,1180,440)
+   PARENT 3
+  }
+  NET BUS  6, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="count(5:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET BUS  7, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="pcWriteValue(5:0)"
+    #VHDL_TYPE="STD_LOGIC_VECTOR"
+   }
+  }
+  NET WIRE  8, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="stall"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  NET WIRE  9, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="clock"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  NET WIRE  10, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="pcWrite"
+    #VHDL_TYPE="STD_LOGIC"
+   }
+  }
+  VTX  11, 0, 0
+  {
+   COORD (1400,280)
+  }
+  VTX  12, 0, 0
+  {
+   COORD (1460,280)
+  }
+  BUS  13, 0, 0
+  {
+   NET 6
+   VTX 11, 12
+  }
+  VTX  14, 0, 0
+  {
+   COORD (1081,280)
+  }
+  VTX  15, 0, 0
+  {
+   COORD (1180,280)
+  }
+  WIRE  16, 0, 0
+  {
+   NET 9
+   VTX 14, 15
+  }
+  VTX  17, 0, 0
+  {
+   COORD (1180,320)
+  }
+  VTX  18, 0, 0
+  {
+   COORD (1081,320)
+  }
+  WIRE  19, 0, 0
+  {
+   NET 10
+   VTX 17, 18
+  }
+  VTX  20, 0, 0
+  {
+   COORD (1180,400)
+  }
+  VTX  21, 0, 0
+  {
+   COORD (1160,400)
+  }
+  BUS  22, 0, 0
+  {
+   NET 7
+   VTX 20, 21
+  }
+  VTX  23, 0, 0
+  {
+   COORD (1180,360)
+  }
+  VTX  24, 0, 0
+  {
+   COORD (1160,360)
+  }
+  WIRE  25, 0, 0
+  {
+   NET 8
+   VTX 23, 24
+  }
+ }
+ 
+}
+

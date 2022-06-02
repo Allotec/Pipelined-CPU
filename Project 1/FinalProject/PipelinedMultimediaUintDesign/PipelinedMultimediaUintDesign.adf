@@ -1,0 +1,130 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=pipelinedmultimediauintdesign
+
+[Library]
+PipelinedMultimediaUintDesign=.\PipelinedMultimediaUintDesign\PipelinedMultimediaUintDesign.lib
+
+[$LibMap$]
+PipelinedMultimediaUintDesign=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+AccessACCB=0
+AccessACCR=0
+AccessReadTopLevel=0
+AccessRead=1
+AccessReadWrite=0
+AccessReadWriteSLP=0
+SimulationAccessReadPaths=
+SimulationAccessReadModules=
+SimulationAccessReadWritePaths=
+SimulationAccessReadWriteModules=
+SimulationAccessNetsPaths=
+SimulationAccessNetsModules=
+
+[Folders]
+Name0=Event Lists
+Directory0=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension0=lst
+Name1=Logs
+Directory1=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension1=log;htm;xml;txt
+Name2=Waveforms
+Directory2=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension2=asdb;awc;asdbc;asdbe
+Name3=Makefiles
+Directory3=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension3=mak
+Name4=Memory
+Directory4=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension5=dll
+Name6=PDF
+Directory6=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension6=pdf
+Name7=HTML
+Directory7=C:\Users\Matthew Champagne\OneDrive\Fall 2021\ESE 345\Programming Assignments\Project 1\FinalProject\PipelinedMultimediaUintDesign\
+Extension7=htm;html
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=pipelinedcpu_tb|tb|0  
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVhdlSets]
+NetlistCompilation=1
+EnableVHDL93Key=0
+EnableVHDL2002Key=0
+EnableVHDL2008Key=1
+EnableVHDL2018Key=0
+DisableVHDL87Key=0
+Syntax RelaxLRM=0
+MaxErrorsKey=100
+CompileWithDebug=0
+OptimizationLevel=3
+DisableRangeChecks=0
+ProtectLevel=0
+IncrementalCompilation=0
+AdditionalOptions=
+
+[Files]
+/ProgramCounter.vhd=-1
+/RegisterFile.vhd=-1
+/Control.vhd=-1
+/InstructionFetchDecodeReg.vhd=-1
+/InstructionDecodeExecuteReg.vhd=-1
+/ForwardingUnit.vhd=-1
+/InstructionBuffer.vhd=-1
+/ExecuteWriteBackReg.vhd=-1
+/ALURegisterDecoder.vhd=-1
+/ALU.vhd=-1
+/PipelinedCPU.bde=-1
+/InstructionFetchUnit.vhd=-1
+/RegisterFile_tb.vhd=-1
+/ProgramCounter_tb.vhd=-1
+/InstructionFetchUnit_tb.vhd=-1
+/PipelinedCPU_tb.vhd=-1
+/InstructionBuffer_tb.vhd=-1
+/InstructionFetchDecodeReg_tb.vhd=-1
+/ALU_tb.vhd=-1
+
+[Files.Data]
+.\src\ProgramCounter.vhd=VHDL Source Code
+.\src\RegisterFile.vhd=VHDL Source Code
+.\src\Control.vhd=VHDL Source Code
+.\src\InstructionFetchDecodeReg.vhd=VHDL Source Code
+.\src\InstructionDecodeExecuteReg.vhd=VHDL Source Code
+.\src\ForwardingUnit.vhd=VHDL Source Code
+.\src\InstructionBuffer.vhd=VHDL Source Code
+.\src\ExecuteWriteBackReg.vhd=VHDL Source Code
+.\src\ALURegisterDecoder.vhd=VHDL Source Code
+.\src\ALU.vhd=VHDL Source Code
+.\src\PipelinedCPU.bde=Block Diagram
+.\src\InstructionFetchUnit.vhd=VHDL Source Code
+.\src\RegisterFile_tb.vhd=VHDL Source Code
+.\src\ProgramCounter_tb.vhd=VHDL Source Code
+.\src\InstructionFetchUnit_tb.vhd=VHDL Source Code
+.\src\PipelinedCPU_tb.vhd=VHDL Source Code
+.\src\InstructionBuffer_tb.vhd=VHDL Source Code
+.\src\InstructionFetchDecodeReg_tb.vhd=VHDL Source Code
+.\src\ALU_tb.vhd=VHDL Source Code
+
+[file_out:/PipelinedCPU.bde]
+/..\compile\PipelinedCPU.vhd=-1
+
